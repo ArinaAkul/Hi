@@ -34,11 +34,22 @@
             text-transform: uppercase;
         }
         
-        a:hover {
+        a.mn:hover {
+            padding-left: 20px;
+            -webkit-transition: background-image 2s ease-in-out;
+            transition: background-image 2s ease-in-out;
+        }
+        
+        a.mn:hover::before {
+            opacity: 1;
+            transition: 2s;
+        }
+        
+        a.mn::before {
+            content: "|\00a0\00a0\00a0";
             background-image: url(lin.gif);
             background-repeat: no-repeat;
-            padding-left: 20px;
-            transition: 4s;
+            opacity: 0;
         }
         
         p::first-letter {
@@ -66,9 +77,9 @@
 
         <br>
         <p vlass="p">Текст</p>
-        <a href="https://vitebsk.itstep.by/"> Текст Меню</a>
-        <a href="https://vitebsk.itstep.by/"> Текст Меню</a>
-        <a href="https://vitebsk.itstep.by/"> Текст Меню</a>
+        <a class="mn" href="https://vitebsk.itstep.by/"> Текст Меню</a><br>
+        <a class="mn" href="https://vitebsk.itstep.by/"> Текст Меню</a><br>
+        <a class="mn" href="https://vitebsk.itstep.by/"> Текст Меню</a>
 
 </body>
 
